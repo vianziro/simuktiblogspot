@@ -2,27 +2,27 @@
 
 # Form implementation generated from reading ui file 'ularSatu.ui'
 #
-# Created: Fri Mar 19 00:09:25 2010
+# Created: Fri Mar 19 22:34:28 2010
 #      by: PyQt4 UI code generator 4.7
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
 
-class Ui_Form(object):
-    def setupUi(self, Ui_Form):
-        Ui_Form.setObjectName("Ui_Form")
-        Ui_Form.resize(445, 242)
-        self.centralwidget = QtGui.QWidget(Ui_Form)
+class Ui_mainWindow(object):
+    def setupUi(self, mainWindow):
+        mainWindow.setObjectName("mainWindow")
+        mainWindow.resize(445, 242)
+        self.centralwidget = QtGui.QWidget(mainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        Ui_Form.setCentralWidget(self.centralwidget)
-        self.statusbar = QtGui.QStatusBar(Ui_Form)
+        mainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtGui.QStatusBar(mainWindow)
         self.statusbar.setObjectName("statusbar")
-        Ui_Form.setStatusBar(self.statusbar)
+        mainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(Ui_Form)
-        QtCore.QMetaObject.connectSlotsByName(Ui_Form)
+        self.retranslateUi(mainWindow)
+        QtCore.QMetaObject.connectSlotsByName(mainWindow)
 
-    def retranslateUi(self, Ui_Form):
-        Ui_Form.setWindowTitle(QtGui.QApplication.translate("Ui_Form", "ularSatu", None, QtGui.QApplication.UnicodeUTF8))
+    def retranslateUi(self, mainWindow):
+        mainWindow.setWindowTitle(QtGui.QApplication.translate("mainWindow", "ularSatu", None, QtGui.QApplication.UnicodeUTF8))
 
