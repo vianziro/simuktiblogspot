@@ -9,7 +9,7 @@
 
 class checker {
 
-    private $_panjang = 0;
+    private $_skor = 0;
 
     /**
      * konstruktor dikosongkan
