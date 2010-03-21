@@ -10,6 +10,6 @@
 include_once 'generator.php';
 
 $abc = new generator();
-echo $abc->test(12);
+echo $abc->test(6);
 
 ?>
