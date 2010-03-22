@@ -1,6 +1,6 @@
 <?php
 /**
- * checker.php merupakan kode contoh dari http://simukti.blogspot.com/
+ * @filesource checker.php
  *
  * @author __siMukti
  * @copyright __siMukti - http://simukti.blogspot.com/

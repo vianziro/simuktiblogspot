@@ -1,6 +1,6 @@
 <?php
 /**
- * generator.php merupakan kode contoh dari http://simukti.blogspot.com/
+ * @filesource generator.php
  *
  * @author __siMukti
  * @copyright __siMukti - http://simukti.blogspot.com/
