@@ -1,5 +1,7 @@
 <?php
 /**
+ * Generator password simpel ini mengambil sha1 dari date('dmYGis')
+ *
  * @filesource generator.php
  *
  * @author __siMukti
@@ -11,37 +13,29 @@ class generator {
 
     private $_pengacak;
 
-    /**
-    * @param Integer $panjang - panjang karakter yang diinginkan dari hasil hash SHA1
-    */
-    private function tesBuatPassword($panjang) {
+    private $_karakterSpesial = '+=.-_#@%&(?),!';
 
-        $test = sha1($this->pengacak());
-        // pengacak diambil sebanyak $panjang karakter dari urutan ke 5
-        $hasil = substr($test, 5, $panjang);
-        return $hasil;
+    private $_password = '';
+
+    /**
+    * hasil dari pengacak trus di SHA1 sebanyak 10 karakter
+    */
+    private function _buatRandom() {
+
+        $upper = strtoupper(sha1($this->_pengacak()));
+        $this->_karakterSpesial .= substr($upper, 10, 5);
+
+        $lower = strtolower(sha1($this->_pengacak()));
+        $this->_karakterSpesial .= substr($lower, 20, 5);
+
+        return $this->_karakterSpesial;
         
     }
 
     /**
-     * buat password yang isinya huruf saja
-     */
-    private function _buatHuruf() {}
-
-    /**
-     * buat password yang isinya angka dan huruf
-     */
-    private function _buatAngkaHuruf() {}
-
-    /**
-     * buat password yang isinya angka huruf karakter
-     */
-    private function _buatAngkaHurufKarakter() {}
-
-    /**
      * pengacak ini diambil dari tanggal + bulan + tahun + jam + menit + detik
      */
-    private function pengacak() {
+    private function _pengacak() {
 
         $dyn = date('dmYGis');
         $this->_pengacak = $dyn;
@@ -50,22 +44,17 @@ class generator {
     }
 
     /**
-     * generate password berdasar pilihan panjang, tipe, dan gabungan hash sha1 remote address dan referrer
+     * generate password berdasar pilihan panjang
      *
-     * @param Integer $panjang - default == 6
-     * @param String $tipe - 'huruf' || 'angkahuruf' || 'angkahurufkarakter'
+     * @param Integer $panjang
      */
-    public function generate($panjang = 6, $tipe = 'angkahuruf') { }
-
-    /**
-     *
-     * @param Integer $panjang - panjang password yang diinginkan
-     * @return String
-     */
-    public function test($panjang) {
-
-        return $this->tesBuatPassword($panjang);
-
+    public function generate($panjang) {
+        for ($i = 0; $i < $panjang; $i++) {
+            $random = mt_rand(0, strlen($this->_buatRandom()) - 1);
+            $this->_password .= $this->_karakterSpesial{$random};
+        }
+        
+        return $this->_password;
     }
 
 }

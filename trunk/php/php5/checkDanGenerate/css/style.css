@@ -17,8 +17,6 @@ padding: 0;
 border: 0px none;
 }
 
-/* Let's add some style to our fieldset & legend */
-
 fieldset
 {
 -moz-border-radius: 7px;
@@ -46,7 +44,7 @@ padding-bottom: 2px;
 }
 
 /* Main DIV */
-.m
+.main
 {
 width: 560px;
 padding: 20px;
@@ -54,7 +52,7 @@ height: auto;
 }
 
 /* Left DIV */
-.l
+.left
 {
 width: 140px;
 margin: 0px;
@@ -65,7 +63,7 @@ text-align: right;
 }
 
 /* Right DIV */
-.r
+.right
 {
 width: 300px;
 margin: 0px;
@@ -76,16 +74,30 @@ float: right;
 text-align: left;
 }
 
-.a
+.all
 {
 clear: both;
 width: 470px;
 padding: 10px;
 }
 
-.pesan
+.test {
+    width: 500px;
+margin: 0px;
+padding: 0px;
+
+float: right;
+
+text-align: right;
+
+}
+
+#pesan
 {
-    
+    width: 470px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: #000;
 }
 
 
