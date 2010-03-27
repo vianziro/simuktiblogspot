@@ -1,0 +1,24 @@
+<?php
+/**
+ * @filesource layout.phtml
+ *
+ * @author __siMukti
+ * @copyright __siMukti - http://simukti.blogspot.com/
+ * @license GPL v3
+  */
+?>
+
+<?php echo $this->docType() . "\n"; ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php echo $this->headMeta(); ?>
+<?php echo $this->headTitle(); ?>
+<?php echo $this->headStyle(); ?>
+</head>
+<body>
+<div id="content">
+<h1><?php echo $this->escape($this->title); ?></h1>
+<?php echo $this->layout()->content; ?>
+</div>
+</body>
+</html>

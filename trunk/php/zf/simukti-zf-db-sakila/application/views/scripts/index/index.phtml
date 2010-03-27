@@ -1,0 +1,10 @@
+<a href="<?php echo $this->baseUrl('css/blue/blue.css'); ?>">bla blsa blsa</a>
+<br />
+
+<?php foreach($this->actor as $actor) : ?>
+        <tr>
+        <td><?php echo $this->escape($actor->first_name);?></td>
+        <td><?php echo $this->escape($actor->last_name);?></td>
+        <td><?php echo $this->escape($actor->last_update);?></td>
+        </tr>
+    <?php endforeach; ?>
