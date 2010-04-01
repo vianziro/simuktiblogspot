@@ -1,22 +1,28 @@
 <?php
 /**
- *@filesource proses.php
+ * @filesource proses.php
  *
  * @author __siMukti
  * @copyright __siMukti - http://simukti.blogspot.com/
  * @license GPL v3
   */
 
-include_once 'checker.php';
-include_once 'generator.php';
+require_once 'checker.php';
+require_once 'generator.php';
 
-$abc = new generator();
-$bcd = $abc->generate(6);
-echo $bcd;
+$cek = $_GET['password'];
 
-echo '<br />';
+$cekPass = new checker();
 
-$test = new checker();
-echo $test->cekPassword($bcd);
+
+if(empty($cek)){
+    $abc = new generator();
+    $bcd = $abc->generate(6);
+    echo "<div style=\"background: #EEE;\">Password : {$bcd} <br />";
+    echo "Skor : {$cekPass->cekPassword($bcd)}</div>";
+} else {
+    echo "<div style=\"background: #EEE;\">Password : {$cek} <br />";
+    echo "Skor : {$cekPass->cekPassword($cek)}</div>";
+}
 
 ?>
