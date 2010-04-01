@@ -9,8 +9,6 @@
  * @license GPL v3
   */
 
-require_once 'checker.php';
-
 class generator {
 
     private $_pengacak;
