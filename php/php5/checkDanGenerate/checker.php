@@ -22,8 +22,8 @@ class checker {
      * nilai output = 1 / 2 / 3 / 4
      * 1 = huruf saja atau angka saja
      * 2 = huruf dan angka (lowercase)
-     * 3 = huruf + angka + uppercase + lowercase
-     * 4 = huruf + angka + karakter spesial
+     * 3 = huruf + angka + uppercase saja / lowercase saja
+     * 4 = huruf + angka + karakter spesial + uppercase + lowercase
      * @param String $password - password yang akan dicheck
      */
     public function cekPassword($password) {
