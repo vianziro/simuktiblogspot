@@ -100,13 +100,11 @@ class Simukti_Model_Learning_KMeans
     * Inisialisasi sebaran centroid berdasar nilai terendah dan tertinggi di tiap lajur data x,y,a,b,c
     * Contoh :
     * <code>
-    * <?php
-    * array(     //x  y  a  b  c
+    *            //x  y  a  b  c
     *        array(4, 6, 7, 2, 1),
     *        array(3, 5, 5, 2, 1),
     *        array(6, 2, 4, 8, 2));
-    * // tertinggi -> (6, 6, 7, 8, 2)
-    * ?>
+    * tertinggi -> (6, 6, 7, 8, 2)
     * </code>
     * @param array $data
     * @param integer $k
