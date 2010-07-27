@@ -1,0 +1,20 @@
+<?php
+foreach($this->lists as $vids) {
+?>
+
+<h2><?php echo htmlSpecialChars($vids->getVideoTitle()) ;?></h2>
+
+<?php
+foreach($vids->getVideoThumbnails() as $thumb) {
+?>
+<img src="<?php echo htmlSpecialChars($thumb['url']) ?>" 
+     width="<?php echo htmlSpecialChars($thumb['width']) ?>" 
+     height="<?php echo htmlSpecialChars($thumb['height']) ?>" 
+     alt="<?php echo htmlSpecialChars($thumb['time']) ?>" />
+
+<?php
+}
+?>
+<?php
+}
+?>

@@ -1,0 +1,30 @@
+<?php
+echo '<h3>' . $this->videoTitle 
+     . '</h3><br />Tanggal : '
+     . $this->published
+     . '<br />Tag : '
+     . $this->videoTags
+     . '<br />';
+?>
+
+<object width="<?php echo $this->width ?>" height="<?php echo $this->height ?>">
+        <param name="movie"
+               value="<?php echo htmlSpecialChars($this->url) ?>">
+        </param>
+        <param name="allowFullScreen" value="true"></param>
+        <param name="allowscriptaccess" value="always"></param>
+        <embed src="<?php echo htmlSpecialChars($this->url) ?>"
+               type="application/x-shockwave-flash"
+               allowscriptaccess="always"
+               allowfullscreen="true"
+               width="<?php echo $this->width ?>" height="<?php echo $this->height ?>">
+        </embed>
+    </object>
+
+<?php 
+echo '<br /> Deskripsi : '
+     . $this->desc
+     . '';
+?>
+
+
