@@ -1,0 +1,14 @@
+<?php
+echo $this->fetchForm;
+
+if($this->hasilFetch)
+{
+    foreach($this->hasilFetch as $hasil)
+    {
+        echo "<a href='" . $hasil->Thumbnail->clickUri . "'>";
+        echo "<img src='" . $hasil->Thumbnail->uri ."' />";
+        echo "</a>";
+    }
+}
+
+?>
